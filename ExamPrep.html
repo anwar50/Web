@@ -11,7 +11,8 @@
 		<form id="Todo">
 			<input type="text" id="Input">
 			<button type="button" onclick="List()">Add A subject</button>
-			<input type="text" id="Input">
+			<br>
+			<input type="text" id="Input2">
 			<button type="button" onclick="DateList()">Add A date</button>
 		</form>
 
@@ -28,17 +29,17 @@
 	// create a text node from the user for the subject
 	var text    = document.createTextNode(subject)
 	
-	// create a text node from the user for the subject
+	// create a text node from the user for the date
 	var text2    = document.createTextNode(date)
 	
 	// create a li tag
 	var newText = document.createElement('li')
 	
-	// add the user input to the li tag
+	// adds the user inputs to the li tag which is inside the unordered list tag ul
 	newText.appendChild(text)
 	newText.appendChild(text2)
 				
-	// append the li to the html todoList id tag
+	// append the li tags to the html id tag ul, both the subject and name are stored.
 	document.getElementById('List').appendChild(newText)
 	document.getElementById('DateList').appendChild(newText)
 }
