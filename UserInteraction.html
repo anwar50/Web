@@ -37,14 +37,26 @@
     else {
       alert("Wow you are really young!");
     }
+      
+     
 
     var option  = window.prompt("Do you want me to save all of your details somewhere safe?: ");
 
     if(option == "yes")
     {
       alert("Everything is going to be saved!");
-
-
+      window.prompt("Your information is now going to be displayed on the web!");
+      
+      var arrayofinformation = new Array(name, LastName, descriptionofjob, age);
+      
+      for(var  i =0 ; i< arrayofinformaton.length; i++)
+      {
+      
+        document.write(arrayofinformation[i]);
+      
+      }
+      
+      
     }
     else{
 
