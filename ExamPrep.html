@@ -37,12 +37,13 @@
 		// create a li tag
 		var newText = document.createElement('li')
 		var newDate = document.createElement('li')
+		
 		// adds the user inputs to the li tag which is inside the unordered list tag ul
 		newText.appendChild(text)
 		newDate.appendChild(text2)
-
+				
 		// append the li tags to the html id tag ul, both the subject and name are stored.
-		document.getElementById('Exam').appendChild(newText).style.Color = "Blue"
+		document.getElementById('Exam').appendChild(newText)
 		document.getElementById('Exam').appendChild(newDate)
 		}
 			
