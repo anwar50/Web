@@ -3,53 +3,86 @@
 <html>
 	<head>	
 		<title>Exam timetable preparation with JavaScript</title>
-		//<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" href="style.css">
+		
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
+		<header>
 		<h1>Examination Preparation</h1>
-		<form id="Todo">
+		</header>
+		
+		<br/>
+		<form id="Todo" class="form1">
 			<input type="text" id="Input">
-			<button type="button" onclick="Exam()">Add A subject</button>
+			<button type="button" onclick="Exam()" value="sub" >Add A subject</button>
 			<br>
 			<input type="text" id="Input2">
-			<button type="button" onclick="Exam()">Add A date</button>
-			<br>
-			<input type="reset" value="Clear?" onclick="return ClearForm()" />
+			<button type="button" onclick="Date()" value="date" >Add A date</button>
+			<br/>
+			<br/>
+			<input type="reset" value="Clear Form?" onclick="return ClearForm()" />
+			<input type="reset" value="Clear List?" onclick="return ClearList()" />
 		</form>
-
-		<ul id="Exam"></ul>
-
+		
+		<caption> Subject </caption>
+		<ol id="Exam" class="liststyle1"></ol>
+		<caption> Dates of your exam </caption>
+		<ol id="Date" class="liststyle2"></ol>
+		
 		<script type="text/javascript">
-			function Exam() {
+			function Exam() 
+		{
 		// store the subject user inputs
 		var subject    = document.getElementById('Input').value
 
-		// store the date the user inputs
-		var date    = document.getElementById('Input2').value
+		
 
 		// create a text node from the user for the subject
 		var text    = document.createTextNode(subject)
 
-		// create a text node from the user for the date
-		var text2    = document.createTextNode(date)
+		
 
 		// create a li tag
 		var newText = document.createElement('li')
-		var newDate = document.createElement('li')
+		//var newDate = document.createElement('li')
 		
 		// adds the user inputs to the li tag which is inside the unordered list tag ul
 		newText.appendChild(text)
-		newDate.appendChild(text2)
+		
 				
-		// append the li tags to the html id tag ul, both the subject and name are stored.
-		document.getElementById('Exam').appendChild(newText)
-		document.getElementById('Exam').appendChild(newDate)
+			// append the li tags to the html id tag ol, both the subject and name are stored.
+			
+				document.getElementById('Exam').appendChild(newText)
+			
+				document.getElementById('Exam').appendChild(newDate)
+			
+		
+		}
+		
+		function Date()
+		{
+		
+			// store the date the user inputs
+		var date    = document.getElementById('Input2').value
+		
+		// create a text node from the user for the date
+		var text2    = document.createTextNode(date)
+		
+		// create a li tag to store the date
+		var newDate = document.createElement('li')
+		
+		// adds the user inputs to the li tag which is inside the unordered list tag ul
+		newDate.appendChild(text2)
+		
+		// append the li tags to the html id tag ol, both the subject and name are stored.
+		document.getElementById('Date').appendChild(newDate)
+		
 		}
 			
 			function ClearForm()
-			{
+			{	//checks if the user wishes to completely 
 				return confirm("Are you sure you want to clear the whole form?")
+				
 			}
 		
 		</script>

@@ -1,0 +1,45 @@
+body{
+
+	color = "powderblue;"
+}
+
+h1 {
+	
+	
+	color: gold;
+	margin: absolute;
+	text-align: center;
+}
+header{
+	
+	background-color: powderblue;
+	background-position: center;
+	width: 150%;
+	height: 80px;
+	margin: left;
+}
+
+.form1{
+	
+	margin: align;
+	color: gold;
+	margin: 0 auto; 
+	width:250px;
+}
+button{
+	
+	position: center;
+}
+
+caption {
+	
+	font-family: courier;
+}
+ol.liststyle1 {
+	
+	list-style-type: circle;
+}
+ol.liststyle2 {
+	
+	list-style-type: upper-roman;
+}
