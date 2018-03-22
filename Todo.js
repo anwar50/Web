@@ -1,4 +1,4 @@
-function todoList() {
+function Exam() {
 	// store the subject user inputs
 	var subject    = document.getElementById('Input').value
 	
