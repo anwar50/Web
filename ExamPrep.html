@@ -10,10 +10,10 @@
 		<h1>Examination Preparation</h1>
 		<form id="Todo">
 			<input type="text" id="Input">
-			<button type="button" onclick="List()">Add A subject</button>
+			<button type="button" onclick="Exam()">Add A subject</button>
 			<br>
 			<input type="text" id="Input2">
-			<button type="button" onclick="DateList()">Add A date</button>
+			<button type="button" onclick="Exam()">Add A date</button>
 		</form>
 
 		<ul id="Exam"></ul>
@@ -40,8 +40,8 @@
 	newDate.appendChild(text2)
 				
 	// append the li tags to the html id tag ul, both the subject and name are stored.
-	document.getElementById('List').appendChild(newText)
-	document.getElementById('DateList').appendChild(newDate)
+	document.getElementById('Exam').appendChild(newText)
+	document.getElementById('Exam').appendChild(newDate)
 }
 		
 		</script>
