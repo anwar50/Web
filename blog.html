@@ -1,0 +1,78 @@
+<html>
+
+
+<head>
+<link rel="stylesheet" href="StyleOfBlog.css">
+<title> Welcome to my blog </title>
+
+</head>
+<body>
+  <h2 style="text-align: center"> I am going to first need some information about yourself! </h2>
+
+  <h2 style="text-align: center"> Please answer the questions as honestly as possible! </h2>
+
+  <input type="button" name="Start Now" value="StartNow" onclick="AboutUser()" >
+	
+	<p id="Display"> </p>
+  <script type="text/javascript">
+    //calls function and user is asked a series of questions
+    function AboutUser(){
+    var name = window.prompt("Enter your first name please ");
+    var LastName = window.prompt("Enter your second name please ");
+    alert("hi, welcome to my blog! " + name + " " + LastName);
+    alert("I am a beginner in softwarer developing");
+    alert("You are going to now receive a series of questions about yourself!");
+    var descriptionofjob = window.prompt("Please tell me what you do? " + name);
+    alert("Thats great to hear! " + name);
+    var age = window.prompt("How old are you? " + name);
+    var Myage = 19;
+	//if statements used to show what the age difference is
+    if(age > Myage)
+    {
+      alert("Hey you are older than me!");
+	var difference = Myage - age;
+	alert("You are " + difference + " older than me");
+    }
+    else {
+      alert("Wow you are really young!");
+	var difference2 = age - Myage;
+	alert("You are " + difference2 + " younger than me");    
+	}
+      	
+     	//user is asked if they want their information to be saved.
+    var option  = window.prompt("Do you want me to save all of your details somewhere safe?: ");
+	//if they decide to save it all, then it will be stored in an array
+    if(option == "yes")
+    {
+      alert("Everything is going to be saved!");
+      alert("Your information is now going to be displayed on the web!");
+      
+      var arrayofinformation = new Array(name, LastName, descriptionofjob, age);
+      
+      for(var  i =0 ; i< arrayofinformaton.length; i++)
+      {
+		//collects the information of user that is inside an array
+	var t = document.createTextNode(arrayofinformation[i])
+		//creates a h1 tag to store the information
+	var text = document.createElement('h1');
+		//adds the array inputs to the h1 tag which is inside the paragraph tag
+	text.appendChild(t);
+		//an append to the h1 tag and p tag, where all of the arrays are displayed one by one
+      	document.getElementById('Display').appendChild(text);
+      //  document.write(arrayofinformation[i]);
+      
+      }
+      
+      
+    }
+    else{
+      alert("Thats fine!")
+    }
+  }
+  </script>
+
+
+
+</body>
+
+</html>
