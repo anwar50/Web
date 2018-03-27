@@ -1,0 +1,88 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: url(img2.png);
+	background-size: cover;
+	background-position: center;
+	background-color:softred;
+	font-family: 'century Gothic', sans-serif;
+	background-size: contain;
+	animation: animate 10s linear infinite;
+
+	-webkit-animation: snow 10s linear infinite;
+    -moz-animation: snow 10s linear infinite;
+    -ms-animation: snow 10s linear infinite;
+}
+@keyframes snow {
+    100% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    0% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+    100% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    0% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+    100% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    0% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+    100% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    0% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+
+
+
+@-webkit-keyframes typing {
+    from { width: 0 }
+    to { width:16.3em }
+}
+
+@-moz-keyframes typing {
+    from { width: 0 }
+    to { width:16.3em }
+}
+
+@-webkit-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: transparent }
+}
+
+@-moz-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: transparent }
+}
+
+
+h1 {
+    font-size:50px;
+	float: left-side;
+    width:16.3em;
+    white-space:nowrap;
+    overflow:hidden;
+	margin: auto;
+	margin-top: -40px;
+	margin-left: 10px;
+    border-right: .1em solid black;
+
+	    -webkit-animation: typing 6s steps(30), /* # of steps = # of characters */
+                        blink-caret 1s step-end infinite;
+    -moz-animation: typing 6s steps(30), /* # of steps = # of characters */                        
+blink-caret 1s step-end infinite;
+}
+
+input{
+
+	margin:auto;
+  	display:block;
+}
+
+h2 {
+	color: skyblue;
+
+}	
+
+

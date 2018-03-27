@@ -1,0 +1,72 @@
+<html>
+
+
+<head>
+<link rel="stylesheet" href="StyleOfBlog.css">
+<title> Welcome to my blog </title>
+
+</head>
+<body>
+  <h2 style="text-align: center"> I am going to first need some information about yourself! </h2>
+
+  <h2 style="text-align: center"> Please answer the questions as honestly as possible! </h2>
+
+  <input type="button" name="Start Now" value="StartNow" onclick="AboutUser()" >
+
+  <script type="text/javascript">
+    //calls function
+    function AboutUser(){
+    var name = window.prompt("Enter your first name please ");
+    var LastName = window.prompt("Enter your second name please ");
+    alert("hi, welcome to my blog! " + name + " " + LastName);
+    alert("I am a beginner in softwarer developing");
+    alert("Please enjoy my blog!");
+
+    var descriptionofjob = window.prompt("Please tell me what you do? " + name);
+
+    alert("Thats great to hear! " + name);
+
+    var age = window.prompt("How old are you? " + name);
+    var Myage = 19;
+
+    if(age > Myage)
+    {
+      alert("Hey you are older than me!");
+
+    }
+    else {
+      alert("Wow you are really young!");
+    }
+      
+     
+
+    var option  = window.prompt("Do you want me to save all of your details somewhere safe?: ");
+
+    if(option == "yes")
+    {
+      alert("Everything is going to be saved!");
+      window.prompt("Your information is now going to be displayed on the web!");
+      
+      var arrayofinformation = new Array(name, LastName, descriptionofjob, age);
+      
+      for(var  i =0 ; i< arrayofinformaton.length; i++)
+      {
+      
+        document.write(arrayofinformation[i]);
+      
+      }
+      
+      
+    }
+    else{
+
+      alert("Thats fine!")
+    }
+  }
+  </script>
+
+
+
+</body>
+
+</html>
