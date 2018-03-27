@@ -20,6 +20,8 @@
 			<button type="button" onclick="Date()" value="date" >Add A date</button>
 			<br/>
 			<br/>
+			<input type="text" id="color" placeholder="change colour" onchange="changeColour('foreground', this.value)">
+			<br />
 			<input type="reset" value="Clear Form?" onclick="return ClearForm()" />
 			<input type="reset" value="Clear List?" onclick="return ClearList()" />
 		</form>
@@ -58,7 +60,15 @@
 			
 		
 		}
+			//function to allow user to change colour of their information
+		function changeColour(value, colour)
+		{	//value is taken from parameter
+			if(value == "foreground")
+			{		//document is changed to the desired colour the user chooses based on 'onchange' event
+				document.body.style.color = colour;
+			}
 		
+		}
 		function Date()
 		{
 		
@@ -83,6 +93,23 @@
 			{	//checks if the user wishes to completely 
 				return confirm("Are you sure you want to clear the whole form?")
 				
+			}
+			function ClearList()
+			{	
+				//checks if the user wishes to completely 
+				var response =  confirm("Are you sure you want to clear the whole form?")
+				
+				if(response == "yes")
+				{
+					var element1 = document.getElementById("Date");
+					var element2 = document.getElementById("Exam");
+					
+					element1.outerHTML = "";
+					delete element1;
+					
+					element2.outerHTML = "";
+					delete element2;
+				}
 			}
 		
 		</script>
